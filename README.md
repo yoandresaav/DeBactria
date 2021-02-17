@@ -1,4 +1,4 @@
-# CrowdCoin
+# DeBactria
 An ethereum based blockchain solution to Kickstart scamming problems
 
 Open Terminal inside kickstart-frontend:
