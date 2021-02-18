@@ -2,11 +2,8 @@ const Web3 = require('web3');
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const factory = require("../kickstart-frontend/src/build/CampaignFactory.json");
 
-const nmonic = 'winner visit banana describe nominee custom midnight erase weather green giraffe yellow';
-
 var privateKeys = [
   "e6f3923573935fc2842f090de8e91ef62c33fe982f1ad4d0f65a819d9599e634",
-  "fecdfd34e70ef4be1ab1d4302520de826205294bd6e6d3f9a9bd941dfe4e1ee4",
 ];
 
 

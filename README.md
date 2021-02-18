@@ -25,4 +25,5 @@ https://www.digitaltrends.com/cool-tech/biggest-kickstarter-and-indiegogo-scams/
 ## Roadmap:
 - Correr en local
 - Conectar con metamask
-- 
+- Desplegar en Binance Smart Chain
+- Crear configuraciones para produccion y desarrollo
