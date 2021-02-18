@@ -2,3 +2,4 @@ node_modules
 kickstart-frontend/node_modules
 yarn.lock
 .DS_Store
+.env

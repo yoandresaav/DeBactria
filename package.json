@@ -9,6 +9,7 @@
   "author": "Ayush Dubey",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fs-extra": "^9.0.0",
     "ganache-cli": "^6.9.1",
     "mocha": "^7.1.1",
