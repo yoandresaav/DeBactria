@@ -1,7 +1,8 @@
 import {LOAD_ACCOUNTS} from "../actionTypes";
 
 const defaultState = {
-    account : 0x0
+    account : 0,
+    accountObj: null,
 }
 
 export default function loadAccounts(state=defaultState,action){
@@ -9,7 +10,8 @@ export default function loadAccounts(state=defaultState,action){
         case LOAD_ACCOUNTS:
             return {
                 ...state,
-                account: action.account
+                account: action.account,
+                accountObj: action.accountObj,
             };
         default:
             return state;

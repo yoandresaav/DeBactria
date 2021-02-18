@@ -237,6 +237,10 @@
     color: black;
 }
 
+body {
+    margin: 0;
+}
+
 .main-body{
     display: flex;
     flex-direction: row;

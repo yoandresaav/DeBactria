@@ -1,10 +1,11 @@
 import React,{Component} from "react";
 import Header from "../containers/Header";
-import "../Home.css";
 import factory from "../services/campaignfactory";
 import getWeb3 from "../services/web3_v2";
 import {connect} from "react-redux";
 import {deployedCampaigns} from "../store/actions/deployedCampaigns";
+import {loadAccounts} from "../store/actions/loadAccounts";
+import "../Home.css";
 
 class NewCampaign extends Component{
     constructor(props){
@@ -17,6 +18,8 @@ class NewCampaign extends Component{
         }
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
+      
+        console.log('El store tiene: ', this.store)
     }
 
     handleInputChange(e){
@@ -32,26 +35,14 @@ class NewCampaign extends Component{
         const minContribution = this.state.value;
         if(minContribution.length>0){
             const factoryInstance = await factory();
-            const web3Instance = await getWeb3();
-
-
-
-            const accounts = await web3Instance.eth.getAccounts();
-
-
-            console.log('web3Instance: ', web3Instance)
-            console.log('accounts: ', accounts)
-            console.log('accounts: ', accounts[0])
-
-            // try{
-              this.setState({
-                  handlingTransaction: true
-              });
-              const thash = await factoryInstance.methods.createCampaign(minContribution).send({
-                  from: accounts[0],
-              });
-              await this.props.dispatch(deployedCampaigns());
-              this.props.history.push("/");
+            this.setState({
+                handlingTransaction: true
+            });
+            const thash = await factoryInstance.methods.createCampaign(minContribution).send({
+                from: this.props.account,
+            });
+            await this.props.dispatch(deployedCampaigns());
+            this.props.history.push("/");
             // }
             // catch(e){
             //     this.setState({
@@ -70,8 +61,7 @@ class NewCampaign extends Component{
                 handlingTransaction: false
             });
             // }
-        }
-        else{
+        } else{
             this.setState({
                 errorMessage: "Minimum Contribution field cannot be empty",
                 errorVisible: true
@@ -90,6 +80,10 @@ class NewCampaign extends Component{
             <Header></Header>
             <h2>Create a Campaign</h2>
             <h3>Minimum Contribution</h3>
+            <h4>Account: {this.props.account}
+            {(this.props.account === 0) &&
+              <button onClick={()=>{this.props.dispatch(loadAccounts())}} >Conectar</button>}
+            </h4>
             <form onSubmit={this.handleFormSubmit}>
                 <div className="input-box">
                     <input type="text" value={this.state.value} onChange={this.handleInputChange} placeholder="Minimum Contribution(in Wei)"></input>
@@ -106,7 +100,11 @@ class NewCampaign extends Component{
 }
 
 function mapStateToProps(state){
-    return state;
+    console.log('El accounts es ', state.loadAccounts.account)
+    const statusAccount = {
+      account: state.loadAccounts.account,
+    }
+    return statusAccount;
 }
 
 export default connect(mapStateToProps,null)(NewCampaign);

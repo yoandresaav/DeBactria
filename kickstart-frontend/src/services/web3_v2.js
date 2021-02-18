@@ -5,7 +5,6 @@ const getWeb3 = () => {
   return new Promise( (resolve, reject) => {
     // window.addEventListener('load', function(){
       let web;
-      console.log('Dentro del web3')
       if (window.ethereum){
         web = new Web3(window.ethereum);
         try {
