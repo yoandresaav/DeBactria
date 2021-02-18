@@ -44,7 +44,7 @@ class ShowCampaign extends Component{
             const accounts = await web3Instance.eth.getAccounts();
             const campaignInstance = await new web3Instance.eth.Contract(
                 abi,
-                this.props.match.params.id    
+                this.props.match.params.id
             );
             try{
                 this.setState({

@@ -33,12 +33,14 @@ class NewRequest extends Component{
                 const accounts = await web3Instance.eth.getAccounts();
                 const campaignInstance = await new web3Instance.eth.Contract(abi,this.props.match.params.id);
                 console.log(accounts[0])
+
                 await campaignInstance.methods.createRequest(description,
                     web3Instance.utils.toWei(value,'ether'),
                     recipient).send({
                         from: accounts[0]
                     });
                 this.props.history.push(`\campaigns\${this.props.match.params.id}\requests`); 
+                
             // }
             // catch(e){
             //     this.setState({
