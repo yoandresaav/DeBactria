@@ -103,13 +103,22 @@ class Requests extends Component{
             let val = web3.utils.fromWei(value.value,"ether");
             console.log(value.completed);
             return <tr key={index}>
-                <td className={value.completed?"one modified":"one"}><p>{index}</p></td>
+                <td className={value.completed?"one modified":"one"}><p>{index+1}</p></td>
                 <td className={value.completed==false?"two modified":"two"}><p>{value.description}</p></td>
                 <td className={value.completed?"three modified":"three"}><p>{val}</p></td>
-                <td className={value.completed?"four modified":"four"}><p>{value.recipient}</p></td>
-                <td className={value.completed?"five modified":"five"}><p>{`${value.approvalCount}/${approversCount}`}</p></td>
-                <td className="six" id={index} style={value.completed?{opacity:"0"}:{opacity:"1"}}><div className="table-button" id={index} onClick={this.approveRequest}><p id={index} onClick={this.approveRequest}>Approve</p></div></td>
-                <td className="seven" id={index} style={value.completed?{opacity:"0"}:{opacity:"1"}}><div className="table-button table-button-two" id={index} onClick={this.finalizeRequest}><p id={index} onClick={this.finalizeRequest}>Finalize</p></div></td>
+                <td className={value.completed?"four modified":"four"}><p style={{fontSize:12}}>{value.recipient}</p></td>
+                <td className={value.completed?"five modified":"five"} style={{textAlign: 'right'}}><p>{`${value.approvalCount}/${approversCount}`}</p></td>
+                
+                <td className="six" id={index} style={value.completed?{opacity:"0"}:{opacity:"1"}}>
+                  <div className="table-button" id={index} onClick={this.approveRequest}>
+                    <p id={index} onClick={this.approveRequest}>Approve</p>
+                  </div>
+                </td>
+                <td className="seven" id={index} style={value.completed?{opacity:"0"}:{opacity:"1"}}>
+                  <div className="table-button table-button-two" id={index} onClick={this.finalizeRequest}>
+                    <p id={index} onClick={this.finalizeRequest}>Finalize</p>
+                  </div>
+                </td>
             </tr>
         });
         return <div className="requests">
@@ -118,7 +127,7 @@ class Requests extends Component{
             <div className="link-container">
                 <Link to={`/campaigns/${this.props.match.params.id}/requests/new`}>
                     <div className="button">
-                        <p>Add Request</p>
+                        <p style={{ whiteSpace:'nowrap'}}>Add Request</p>
                     </div>
                 </Link>
             </div>

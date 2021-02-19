@@ -1,19 +1,32 @@
 import React,{Component} from "react";
 import {Link} from "react-router-dom";
+import ConnectLink from '../components/ConnectLink';
+import {connect} from "react-redux";
 import "../Home.css";
 
 class Header extends Component{
-    render(){
+  render(){
+      console.log('Propsssss', this.props.account)
         return <div className="header">
             <div className="left-nav">
-                <Link to="/">CrowdCoin</Link>
+                <Link to="/">DeBactria</Link>
             </div>
-            <div className="right-nav">
-                <Link to="/campaigns">Campaigns</Link>
-                <Link to="/campaigns/new">+</Link>
+            {(this.props.account !== 0 && this.props.account !== undefined) &&
+              <div className="right-nav">
+                  <Link to="/campaigns/new">Create Campaign</Link>
+              </div>}
+            <div className="last-div">
+              <ConnectLink />
             </div>
         </div>
     }
 }
 
-export default Header;
+function mapStateToProps(state) {
+  const statusAccount = {
+    account: state.loadAccounts.account,
+  }
+  return statusAccount;
+}
+
+export default connect(mapStateToProps, null)(Header);

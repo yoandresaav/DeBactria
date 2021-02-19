@@ -7,7 +7,7 @@ export function getCampaignDetails(id){
         const web3Instance = await initWeb3();
         const campaignInstance = await new web3Instance.eth.Contract(
             abi,
-            id    
+            id
         );
         const res = await campaignInstance.methods.getCampaignDetails().call();
         dispatch({
