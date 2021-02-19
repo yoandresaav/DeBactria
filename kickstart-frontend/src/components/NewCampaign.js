@@ -80,10 +80,6 @@ class NewCampaign extends Component{
             <Header></Header>
             <h2>Create a Campaign</h2>
             <h3>Minimum Contribution</h3>
-            <h4>Account: {this.props.account}
-            {(this.props.account === 0) &&
-              <button onClick={()=>{this.props.dispatch(loadAccounts())}} >Conectar</button>}
-            </h4>
             <form onSubmit={this.handleFormSubmit}>
                 <div className="input-box">
                     <input type="text" value={this.state.value} onChange={this.handleInputChange} placeholder="Minimum Contribution(in Wei)"></input>
@@ -100,7 +96,6 @@ class NewCampaign extends Component{
 }
 
 function mapStateToProps(state){
-    console.log('El accounts es ', state.loadAccounts.account)
     const statusAccount = {
       account: state.loadAccounts.account,
     }
