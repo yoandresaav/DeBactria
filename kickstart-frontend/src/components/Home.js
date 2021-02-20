@@ -14,7 +14,6 @@ class Home extends Component{
     }
 
     render(){
-      console.log('props: ',this.props.account)
         return <div className="home">
             <Header></Header>
             <h2>Open Campaigns</h2>
@@ -35,7 +34,7 @@ class Home extends Component{
                   </Link>
                   :
                   <p style={{width: 250}}>
-                    Conecta tu wallet para agregar una nueva campaña
+                    Link the wallet and add new campaign
                   </p>
                 }
             </div>

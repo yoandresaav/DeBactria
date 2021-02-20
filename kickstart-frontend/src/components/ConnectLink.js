@@ -13,7 +13,7 @@ class ConnectLink extends Component{
           </a>
           :
           <a className="link-connect">
-            {this.props.account}
+            {`${this.props.account.slice(0, 6)}...${this.props.account.slice(-6)}`}
           </a>
         }
       </>
