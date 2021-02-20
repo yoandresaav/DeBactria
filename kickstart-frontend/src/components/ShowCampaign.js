@@ -134,7 +134,7 @@ class ShowCampaign extends Component{
                     <div className="card-row">
                         <div className="card">
                             <h1>{balance}</h1>
-                            <p className="first-p" style={{color: "#a9a9a9"}}>Campaign Balance(ether)</p>
+                            <p className="first-p" style={{color: "#a9a9a9"}}>Campaign Balance(bnb)</p>
                             <p>The balance is how much money this campaign has left to spend</p>
                         </div>
                     </div>
