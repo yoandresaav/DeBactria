@@ -2,8 +2,10 @@ import Web3 from 'web3';
 
 let web3;
 
+const isLocal = false;
+
 export default async function initWeb3(){
-    if(window.web3){
+    if(isLocal){
       web3 = new Web3(window.web3.currentProvider);
     } else{
         const provider = new Web3.providers.HttpProvider(
