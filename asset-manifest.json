@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DeBactria/static/css/main.7d52aada.chunk.css",
+    "main.js": "/DeBactria/static/js/main.f42f94a0.chunk.js",
+    "main.js.map": "/DeBactria/static/js/main.f42f94a0.chunk.js.map",
+    "runtime-main.js": "/DeBactria/static/js/runtime-main.2c4b280e.js",
+    "runtime-main.js.map": "/DeBactria/static/js/runtime-main.2c4b280e.js.map",
+    "static/js/2.cd20d84a.chunk.js": "/DeBactria/static/js/2.cd20d84a.chunk.js",
+    "static/js/2.cd20d84a.chunk.js.map": "/DeBactria/static/js/2.cd20d84a.chunk.js.map",
+    "index.html": "/DeBactria/index.html",
+    "precache-manifest.a383d81e5b11aaa7a8570bc93152d4c6.js": "/DeBactria/precache-manifest.a383d81e5b11aaa7a8570bc93152d4c6.js",
+    "service-worker.js": "/DeBactria/service-worker.js",
+    "static/css/main.7d52aada.chunk.css.map": "/DeBactria/static/css/main.7d52aada.chunk.css.map",
+    "static/js/2.cd20d84a.chunk.js.LICENSE.txt": "/DeBactria/static/js/2.cd20d84a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c4b280e.js",
+    "static/js/2.cd20d84a.chunk.js",
+    "static/css/main.7d52aada.chunk.css",
+    "static/js/main.f42f94a0.chunk.js"
+  ]
+}
