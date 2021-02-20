@@ -1,5 +1,7 @@
 import Web3 from 'web3';
 
+const NET_ID_BSC_TESTNET = 97;
+
 const getWeb3 = () => {
   
   return new Promise( async (resolve, reject) => {
@@ -7,6 +9,14 @@ const getWeb3 = () => {
       let web;
       if (window.ethereum && window.ethereum.isMetaMask){
         web = new Web3(window.ethereum);
+
+        const netId = await web.eth.net.getId()
+        if (netId !== NET_ID_BSC_TESTNET){
+          // Is connect to binance testnet
+          alert('Change your wallet to BSC Testnet')
+          reject();
+        }
+
         try {
             // Request account access if needed
             await window.ethereum.enable();

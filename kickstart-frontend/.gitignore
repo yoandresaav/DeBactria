@@ -14,6 +14,7 @@
 # misc
 .DS_Store
 .env
+.env_local
 /bsc/.env
 .env.local
 .env.development.local
