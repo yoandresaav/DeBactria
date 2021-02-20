@@ -1,3 +1,10 @@
+body {
+    font-size: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    background: black;
+    color: #fff;
+}
+
 @keyframes loader{
 	0%{
 	}
@@ -15,18 +22,16 @@
     }
 }
 
-.home,.new-campaign-page,.show-campaigns,.requests,.new-request{
+.home,.start-page,.new-campaign-page,.show-campaigns,.requests,.new-request{
     display: flex;
     flex-direction: column;
     margin: 1vh 9vw;
-    font-family: 'Roboto', sans-serif;
 }
 
 .home>h2,.new-campaign-page>h2,.new-campaign-page>h3,.show-campaigns>h2,.requests>h2,.new-request>h2{
     margin: 32px 8px;
     font-size: 28px;
     font-weight: 600;
-    font-family: 'Roboto', sans-serif;
 }
 
 .new-campaign-page>h3{
@@ -61,7 +66,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-family: 'Roboto', sans-serif;
     justify-content: space-between;
     margin-right: 32px;
 }
@@ -84,13 +88,11 @@
 }
 
 .card>p,.show-campaigns-main>form>p{
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: rgba(0,0,0,0.7);
 }
 
 .show-campaigns-main>form>p{
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 700;
 }
@@ -113,7 +115,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-family: 'Roboto', sans-serif;
 }
 
 .input-box-new>p{
@@ -133,6 +134,7 @@
     border-radius: 4px;
     outline: none;
     margin-bottom: 16px;
+    background-color: bisque;
 }
 
 .input-box>div{
@@ -148,7 +150,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
 
@@ -160,8 +161,8 @@
 
 .new-campaign-page>form>.button,.show-campaigns-main>form>.button,.show-campaigns-main>.card-grid>a>.button,.requests>.link-container>a>.button,.new-request>form>.input-box-new>.button{
     color: white;
-    background: #3b5998;
-    border: 1px solid #3b5998;
+    background: #dc1845;
+    border: 1px solid #fff;
     padding: 10px 20px;
     font-size: 20px;
     border-radius: 4px;
@@ -199,7 +200,6 @@
 .header{
     display: flex;
     flex-direction: row;
-    font-family: 'Roboto', sans-serif;
     align-items: center;
     border-radius: 4px;
     margin-top: 1vh;
@@ -213,6 +213,12 @@
 }
 
 
+.logo-nav>a{
+    text-decoration: none;
+    margin-right: 10px;
+    margin-right: 40px;
+}
+
 .left-nav>a{
     padding: 8px 16px;
     border-right: 2px solid #d3d3d3;
@@ -224,16 +230,17 @@
 }
 
 .left-nav>a:hover,.right-nav>a:hover{
-    background: #d3d3d3;
+    background: #264653;
+    color: #fff;
 }
 
 .right-nav>a{
     padding: 8px 16px;
-    border-left: 2px solid #d3d3d3;
+    /* border-left: 2px solid #d3d3d3; */
     text-decoration: none;
     font-size: 18px;
-    color: black;
-    border: 1px solid #d3d3d3;
+    color: #d22cf1;
+    /* border: 1px solid #d3d3d3; */
     margin-right: 10px;
     white-space: nowrap;
 }
@@ -244,7 +251,7 @@
 }
 .last-div .link-connect {
     padding: 8px 16px;
-    color: black;
+    color: #fff;
     border: 1px solid #d3d3d3;
     cursor: pointer;
     border-radius: 10px
@@ -279,7 +286,6 @@ body {
 }
 
 .list{
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 800;
     padding: 16px 32px;
@@ -305,7 +311,7 @@ body {
 }
 
 .main-body-right{
-    background: #3b5998;
+    background: #3b984b;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -313,7 +319,6 @@ body {
     padding: 0px 32px;
     border-radius: 8px;
     color: white;
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     cursor: pointer
 }
@@ -349,7 +354,6 @@ a{
     margin-top: 2vh;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
 }
 
 .requests>table>tr{
@@ -451,4 +455,42 @@ a{
 
 .modified>p{
     color: #a9a9a9;
+}
+
+
+.panel-large-logo {
+    padding-top: 60px;
+    text-align: center;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.93);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+	5% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+    10% {
+		transform: scale(0.93);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	100% {
+		transform: scale(0.93);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.panel-large-logo img {
+    transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+.panel-text > p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 80px;
+    color: darkturquoise;
 }

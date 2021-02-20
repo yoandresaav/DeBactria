@@ -9,6 +9,7 @@ import NewCampaign from "../components/NewCampaign";
 import ShowCampaign from "../components/ShowCampaign";
 import Requests from "../components/Requests";
 import NewRequest from "../components/NewRequest";
+import StartPage from "../components/StartPage";
 
 class App extends React.Component{
 
@@ -23,7 +24,8 @@ class App extends React.Component{
   render(){
     return (
       <Switch>
-          <Route path="/" component={Home} exact></Route>
+          <Route path="/" component={StartPage} exact></Route>
+          <Route path="/opens" component={Home}></Route>
           <Route path="/campaigns/new" component={NewCampaign}></Route>
           <Route path="/campaigns/:id/requests/new" component={NewRequest}></Route>
           <Route path="/campaigns/:id/requests" component={Requests}></Route>

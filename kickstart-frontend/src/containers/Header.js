@@ -3,17 +3,23 @@ import {Link} from "react-router-dom";
 import ConnectLink from '../components/ConnectLink';
 import {connect} from "react-redux";
 import "../Home.css";
+import logo from '../images/debactrialogo.jpeg' 
 
 class Header extends Component{
   render(){
         return <div className="header">
-            <div className="left-nav">
-                <Link to="/">DeBactria</Link>
+            <div className="logo-nav">
+                <Link to="/">
+                  <img width={200} src={logo} />
+                </Link>
             </div>
             {(this.props.account !== 0 && this.props.account !== undefined) &&
               <div className="right-nav">
                   <Link to="/campaigns/new">Create Campaign</Link>
               </div>}
+              <div className="right-nav">
+                  <Link to="/opens">Explore</Link>
+              </div>
             <div className="last-div">
               <ConnectLink />
             </div>
