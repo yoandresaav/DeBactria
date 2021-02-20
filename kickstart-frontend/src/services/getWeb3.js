@@ -10,11 +10,13 @@ const getWeb3 = () => {
       if (window.ethereum && window.ethereum.isMetaMask){
         web = new Web3(window.ethereum);
 
-        const netId = await web.eth.net.getId()
+        const netId = await web.eth.net.getId();
+        console.log('Net id ', netId)
         if (netId !== NET_ID_BSC_TESTNET){
           // Is connect to binance testnet
           alert('Change your wallet to BSC Testnet')
-          reject();
+          reject(null);
+          return;
         }
 
         try {

@@ -5,7 +5,6 @@ export function deployedCampaigns(){
     return async function(dispatch){
         const factoryInstance = await factory();
         const campaigns = await factoryInstance.methods.getDeployedCampaigns().call();
-        console.log('campaigns: ', campaigns)
         dispatch({
             type: DEPLOYED_CAMPAIGNS,
             campaigns: campaigns

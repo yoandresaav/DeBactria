@@ -6,7 +6,6 @@ import "../Home.css";
 
 class Header extends Component{
   render(){
-      console.log('Propsssss', this.props.account)
         return <div className="header">
             <div className="left-nav">
                 <Link to="/">DeBactria</Link>

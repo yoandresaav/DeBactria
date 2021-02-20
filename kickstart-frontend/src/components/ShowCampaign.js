@@ -95,6 +95,7 @@ class ShowCampaign extends Component{
     async componentDidMount(){
         const id = this.props.match.params.id;
         this.props.dispatch(getCampaignDetails(id));
+        console.log('Props:', this.props)
     }
 
     render(){
@@ -152,13 +153,21 @@ class ShowCampaign extends Component{
                     <p>Amount to Contribute</p>
                     <div className="input-box">
                         <input type="text" value={this.state.value} onChange={this.handleInputChange} placeholder="Contribute"></input>
-                        <div style={{width: "15%"}}>ether</div>
+                        <div style={{width: "15%"}}>bnb</div>
                     </div>
                     <div className="error-message" style={this.state.errorVisible?{display: "block"}:{display: "none"}} >{this.state.errorMessage}</div>
+                    
+                    {(this.props.account === 0 || this.props.account === undefined) ?
+                    <div>
+                      To contribute first connect your wallet
+                    </div>
+                    :
                     <div className="button" onClick={this.handleFormSubmit}>
                         <p style={this.state.handlingTransaction?{display: "none"}:{display: "block"}}>Contribute!</p>
                         <div className="loader" style={this.state.handlingTransaction?{display: "block"}:{display: "none"}}></div>
                     </div>
+                    }
+
                 </form>
             </div>
         </div>
@@ -166,7 +175,11 @@ class ShowCampaign extends Component{
 }
 
 function mapStateToProps(state){
-    return state;
+    return {
+      ...state,
+      account: state.loadAccounts.account,
+
+    };
 }
 
 export default connect(mapStateToProps,null)(ShowCampaign);
