@@ -2,7 +2,9 @@ body {
     font-size: 100%;
     font-family: 'Ubuntu', sans-serif;
     background: black;
+    background-image: url('./images/diseno-futurista-fondo-abstracto_23-2148503795.jpg');
     color: #fff;
+    background-size: cover;
 }
 
 @keyframes loader{
@@ -22,7 +24,7 @@ body {
     }
 }
 
-.home,.start-page,.new-campaign-page,.show-campaigns,.requests,.new-request{
+.home,.start-page,.panel-about-us,.new-campaign-page,.show-campaigns,.requests,.new-request{
     display: flex;
     flex-direction: column;
     margin: 1vh 9vw;
@@ -492,5 +494,14 @@ a{
     font-size: 20px;
     text-align: justify;
     padding: 10px 80px;
+    color: darkturquoise;
+}
+
+.panel-about-us .container-text {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.panel-about-us .container-text > p {
     color: darkturquoise;
 }
