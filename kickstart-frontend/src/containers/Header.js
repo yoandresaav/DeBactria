@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import ConnectLink from '../components/ConnectLink';
 import {connect} from "react-redux";
 import "../Home.css";
-import logo from '../images/debactrialogo.jpeg' 
+import logo from '../images/DeBactria-v2.PNG' 
 
 class Header extends Component{
   render(){
@@ -19,6 +19,9 @@ class Header extends Component{
               </div>}
               <div className="right-nav">
                   <Link to="/opens">Explore</Link>
+              </div>
+              <div className="right-nav">
+                  <Link to="/about/us">About us</Link>
               </div>
             <div className="last-div">
               <ConnectLink />
