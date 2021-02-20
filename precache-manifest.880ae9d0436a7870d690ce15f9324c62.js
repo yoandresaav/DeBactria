@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df61b52f9be583d1b6f6103a2029d0ba",
+    "revision": "bdb115ab1ae5990929f6654988aecd31",
     "url": "/DeBactria/index.html"
   },
   {
-    "revision": "a913fc5e3655e31e7f85",
+    "revision": "a0f5e9ac982c1f75da3a",
     "url": "/DeBactria/static/css/main.7d52aada.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DeBactria/static/js/2.cd20d84a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a913fc5e3655e31e7f85",
-    "url": "/DeBactria/static/js/main.f42f94a0.chunk.js"
+    "revision": "a0f5e9ac982c1f75da3a",
+    "url": "/DeBactria/static/js/main.6ea636e0.chunk.js"
   },
   {
     "revision": "8719d20849974c3a0335",

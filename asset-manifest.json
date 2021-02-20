@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DeBactria/static/css/main.7d52aada.chunk.css",
-    "main.js": "/DeBactria/static/js/main.f42f94a0.chunk.js",
-    "main.js.map": "/DeBactria/static/js/main.f42f94a0.chunk.js.map",
+    "main.js": "/DeBactria/static/js/main.6ea636e0.chunk.js",
+    "main.js.map": "/DeBactria/static/js/main.6ea636e0.chunk.js.map",
     "runtime-main.js": "/DeBactria/static/js/runtime-main.2c4b280e.js",
     "runtime-main.js.map": "/DeBactria/static/js/runtime-main.2c4b280e.js.map",
     "static/js/2.cd20d84a.chunk.js": "/DeBactria/static/js/2.cd20d84a.chunk.js",
     "static/js/2.cd20d84a.chunk.js.map": "/DeBactria/static/js/2.cd20d84a.chunk.js.map",
     "index.html": "/DeBactria/index.html",
-    "precache-manifest.a383d81e5b11aaa7a8570bc93152d4c6.js": "/DeBactria/precache-manifest.a383d81e5b11aaa7a8570bc93152d4c6.js",
+    "precache-manifest.880ae9d0436a7870d690ce15f9324c62.js": "/DeBactria/precache-manifest.880ae9d0436a7870d690ce15f9324c62.js",
     "service-worker.js": "/DeBactria/service-worker.js",
     "static/css/main.7d52aada.chunk.css.map": "/DeBactria/static/css/main.7d52aada.chunk.css.map",
     "static/js/2.cd20d84a.chunk.js.LICENSE.txt": "/DeBactria/static/js/2.cd20d84a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2c4b280e.js",
     "static/js/2.cd20d84a.chunk.js",
     "static/css/main.7d52aada.chunk.css",
-    "static/js/main.f42f94a0.chunk.js"
+    "static/js/main.6ea636e0.chunk.js"
   ]
 }

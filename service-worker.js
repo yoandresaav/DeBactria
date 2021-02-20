@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DeBactria/precache-manifest.a383d81e5b11aaa7a8570bc93152d4c6.js"
+  "/DeBactria/precache-manifest.880ae9d0436a7870d690ce15f9324c62.js"
 );
 
 self.addEventListener('message', (event) => {
