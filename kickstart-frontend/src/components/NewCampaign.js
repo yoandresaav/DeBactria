@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import Header from "../containers/Header";
 import factory from "../services/campaignfactory";
-import getWeb3 from "../services/web3_v2";
 import {connect} from "react-redux";
 import {deployedCampaigns} from "../store/actions/deployedCampaigns";
 import {loadAccounts} from "../store/actions/loadAccounts";

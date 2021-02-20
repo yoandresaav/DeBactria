@@ -104,7 +104,7 @@ class Requests extends Component{
             console.log(value.completed);
             return <tr key={index}>
                 <td className={value.completed?"one modified":"one"}><p>{index+1}</p></td>
-                <td className={value.completed==false?"two modified":"two"}><p>{value.description}</p></td>
+                <td className={value.completed===false?"two modified":"two"}><p>{value.description}</p></td>
                 <td className={value.completed?"three modified":"three"}><p>{val}</p></td>
                 <td className={value.completed?"four modified":"four"}><p style={{fontSize:12}}>{value.recipient}</p></td>
                 <td className={value.completed?"five modified":"five"} style={{textAlign: 'right'}}><p>{`${value.approvalCount}/${approversCount}`}</p></td>
@@ -143,7 +143,7 @@ class Requests extends Component{
                 </tr>
                 {requests}
             </table>
-            <div className="loader-container" style={this.state.loading==false?{display: "none"}:{display:"flex"}}>
+            <div className="loader-container" style={this.state.loading===false?{display: "none"}:{display:"flex"}}>
                 <div className="loader"></div>
             </div>
             <div className="error-message" style={this.state.errorVisible?{display: "block"}:{display: "none"}} >{this.state.errorMessage}</div>

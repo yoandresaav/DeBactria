@@ -1,7 +1,7 @@
-import initWeb3 from "../services/web3";
+import initWeb3 from "./web3";
 import {abi} from "../build/CampaignFactory.json";
 
-const CONTRACT_ID = process.env.REACT_APP_CONTRACT_ID || '0xD40C53118D853FE51D8DF59422cf45d874a8EcF2'
+const CONTRACT_ID = process.env.REACT_APP_CONTRACT_ID || '0xd1a7B687D1961d0e8d94bdB7cC8Fd2D961E47f72'
 
 export default async function factory(){
     const web3 = await initWeb3();

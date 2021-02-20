@@ -1,6 +1,6 @@
 import {GET_REQUESTS} from "../actionTypes";
 import {abi} from "../../build/Campaign.json";
-import initWeb3 from "../../services/web3";
+import initWeb3 from "../../services/getWeb3";
 
 export function getRequests(id){
     return async dispatch=>{

@@ -2,19 +2,19 @@ import Web3 from 'web3';
 
 const getWeb3 = () => {
   
-  return new Promise( (resolve, reject) => {
+  return new Promise( async (resolve, reject) => {
     // window.addEventListener('load', function(){
       let web;
-      if (window.ethereum){
+      if (window.ethereum && window.ethereum.isMetaMask){
         web = new Web3(window.ethereum);
         try {
             // Request account access if needed
-            window.ethereum.enable();
+            await window.ethereum.enable();
             // Acccounts now exposed
             resolve(web);
         } catch (error) {
             // User denied account access...
-            console.log('El usuario no deja entrar')
+            alert('User has denied account access to Wallet')
         }
       } else if (window.web3) {
         web = new Web3(Web3.givenProvider || "ws://localhost:7545");
