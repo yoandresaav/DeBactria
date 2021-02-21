@@ -1,5 +1,5 @@
 # DeBactria
-An ethereum based blockchain solution to Kickstart gaming projects
+A BSC-based blockchain solution to Kickstart gaming projects
 
 ## Introduction
 
@@ -18,20 +18,12 @@ Binance Smart Chain enables usability and interoperability of interaction for en
 ## WHat is a crowdfunding
 The term crowdfunding refers to the mechanism of funding a project or a loan (business or personal) with small amounts of money gathered through an online platform. It is the fruit of blockchain advances that reduced transaction costs and information asymmetries, thus making the establishment of these services viable in the internet economy. This advancement is illustrated by the participation of users in the content creation of trusted websites made possible by the Web 2.0, now the interactions between websites and blockchain platforms is possible with Web3. By improving these market imperfections, crowdfunding may become the driver of a long tail in the funding financial service market, by giving access to capital to a larger number of agents with low financial needs than is currently being provided by traditional financial services.Continuing this technological advancement and building on the crowdfunding concept, distributed ledgers can offer new tools for developing funding mechanisms, thus opening up a new horizon for this key web-based nancial service.
 
-## Note:
-To modify ethereum stuff:
-Install dependncies by npm install in the root directory.
-After all dependencies are successfully installed:
-Replace mnemonic and infura project address inside ethereum/deploy.js
-After making any changes to the smart contract run command:
-node compile.js followed by
-node deploy.js which will deploy the smart contract to the provider provided to web3
+## Demo:
 
-To know about Kickstart scams visit the website below:
-https://www.digitaltrends.com/cool-tech/biggest-kickstarter-and-indiegogo-scams/
+https://www.youtube.com/watch?v=tfCA8kAh128
 
-## Install
-- Node 10 
+## Website in Testnet
+- http://184.73.19.253:3000/ 
 
 ## Roadmap:
 - Run local
