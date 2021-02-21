@@ -4,6 +4,7 @@ import factory from "../services/campaignfactory";
 import {connect} from "react-redux";
 import {deployedCampaigns} from "../store/actions/deployedCampaigns";
 import {loadAccounts} from "../store/actions/loadAccounts";
+import CampaignIcon from "../images/campaing-icono.PNG";
 import "../Home.css";
 
 class NewCampaign extends Component{
@@ -79,17 +80,22 @@ class NewCampaign extends Component{
             <Header></Header>
             <h2>Create a Campaign</h2>
             <h3>Minimum Contribution</h3>
-            <form onSubmit={this.handleFormSubmit}>
-                <div className="input-box">
-                    <input type="text" value={this.state.value} onChange={this.handleInputChange} placeholder="Minimum Contribution(in Wei)"></input>
-                    <div>wei</div>
-                </div>
-                <div className="error-message" style={this.state.errorVisible?{display: "block"}:{display: "none"}} >{this.state.errorMessage}</div>
-                <div className="button" onClick={this.handleFormSubmit}>
-                    <p style={this.state.handlingTransaction?{display: "none"}:{display: "block"}}>Create!</p>
-                    <div className="loader" style={this.state.handlingTransaction?{display: "block"}:{display: "none"}}></div>
-                </div>
-            </form>
+            <div className="panel-show-form-image">
+              <form onSubmit={this.handleFormSubmit} style={{width: '50%'}}>
+                  <div className="input-box">
+                      <input type="text" value={this.state.value} onChange={this.handleInputChange} placeholder="Minimum Contribution(in Wei)"></input>
+                      <div style={{width: '60px'}}>wei</div>
+                  </div>
+                  <div className="error-message" style={this.state.errorVisible?{display: "block"}:{display: "none"}} >{this.state.errorMessage}</div>
+                  <div className="button" onClick={this.handleFormSubmit}>
+                      <p style={this.state.handlingTransaction?{display: "none"}:{display: "block"}}>Create!</p>
+                      <div className="loader" style={this.state.handlingTransaction?{display: "block"}:{display: "none"}}></div>
+                  </div>
+              </form>
+              <div className="icono-campaign" style={{textAlign: 'right'}}>
+                <img src={CampaignIcon} />
+              </div>
+            </div>
         </div>
     }
 }

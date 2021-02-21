@@ -36,6 +36,11 @@ body {
     font-weight: 600;
 }
 
+.new-campaign-page .panel-show-form-image{
+    display: flex;
+    width: 100%;
+}
+
 .new-campaign-page>h3{
     font-size: 18px;
     margin-top: 0px;
@@ -43,6 +48,11 @@ body {
 
 .new-campaign-page>form{
     margin: 8px;
+    flex-grow: 1;
+}
+
+.new-campaign-page .icono-campaign{
+    flex-grow: 1;
 }
 
 .show-campaigns-main{
@@ -81,6 +91,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgba(148, 146, 146, 0.139);
 }
 
 .card>h1{
@@ -91,7 +102,7 @@ body {
 
 .card>p,.show-campaigns-main>form>p{
     font-size: 16px;
-    color: rgba(0,0,0,0.7);
+    color: gray;
 }
 
 .show-campaigns-main>form>p{
@@ -144,15 +155,16 @@ body {
     margin-top: -1.5vh;
     margin-left: -0.5vw;
     height: 5vh;
-    border: 2px solid #d3d3d3;
+    border: 2px solid #3fc6de;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    background: #d3d3d3;
+    background: #060606;
     width: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    color: #3fc6de;
 }
 
 .link-container{
@@ -161,9 +173,9 @@ body {
     justify-content: flex-end;
 }
 
-.new-campaign-page>form>.button,.show-campaigns-main>form>.button,.show-campaigns-main>.card-grid>a>.button,.requests>.link-container>a>.button,.new-request>form>.input-box-new>.button{
+.new-campaign-page>.panel-show-form-image>form>.button,.show-campaigns-main>form>.button,.show-campaigns-main>.card-grid>a>.button,.requests>.link-container>a>.button,.new-request>form>.input-box-new>.button{
     color: white;
-    background: #dc1845;
+    background: green;
     border: 1px solid #fff;
     padding: 10px 20px;
     font-size: 20px;
@@ -294,7 +306,8 @@ body {
     border: 2px solid #d3d3d3;
     border-radius: 4px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    background-color: rgba(148, 146, 146, 0.139);
 }
 
 .list>a>p{
@@ -302,14 +315,17 @@ body {
     padding:0;
 }
 
-.list>a{
-    color: #3b5998;
+.list>div>a{
+    color: #3b984b;
     font-size: 18px;
     margin-top: 8px;
     margin-bottom: 0px;
     text-decoration: none;
     font-weight: 500;
     width: 7vw
+}
+.list>div>a:visited {
+    color: #f89b3a;
 }
 
 .main-body-right{
