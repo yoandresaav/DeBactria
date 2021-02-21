@@ -107,7 +107,7 @@ class NewRequest extends Component{
                 <div className="input-box-new">
                     <p>Description</p>
                     <input className="description" type="text" value={this.state.description} onChange={this.handleFormChanges}></input>
-                    <p>Value in Ether</p>
+                    <p>Value in BNB</p>
                     <input className="value" type="text" value={this.state.value} onChange={this.handleFormChanges}></input>
                     <p>Recipient</p>
                     <input className="recipient" type="text" value={this.state.recipient} onChange={this.handleFormChanges}></input>
