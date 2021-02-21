@@ -92,19 +92,22 @@ class ShowCampaign extends Component{
         }
     }
 
-    async componentDidMount(){
+    componentDidMount(){
         const id = this.props.match.params.id;
         this.props.dispatch(getCampaignDetails(id));
-        console.log('Props:', this.props)
     }
 
     render(){
-        const {minimumContribution,balance,approversCount,requestsLength,manager} = this.props.getCampaignDetails;
+        const {minimumContribution,balance,approversCount,requestsLength,manager,title} = this.props.getCampaignDetails;
         return <div className="show-campaigns">
             <Header></Header>
             <h2>Campaign Show</h2>
             <div className="show-campaigns-main">
+                
                 <div className="card-grid"  style={this.state.loading?{display:"none"}:{display:"flex"}}>
+                    <div className="card-row">
+                    {title}
+                    </div>
                     <div className="card-row">
                         <div className="card">
                             <h1>{manager}</h1>

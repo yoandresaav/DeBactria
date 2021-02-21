@@ -10,20 +10,26 @@ const provider = new HDWalletProvider(
   config.HOST
 );
 
-const web3 = new Web3(provider); // Change provider this
+const web3 = new Web3(provider);
 let accounts;
 async function deploy(){
     accounts = await web3.eth.getAccounts();
     console.log(accounts)
+    const addr = accounts[0];
+    var nonce = await web3.eth.getTransactionCount(addr);
+    console.log('Nonce: ', nonce);
     const deployed = await new web3.eth.Contract(factory.abi).
         deploy({
             data: "0x"+factory.evm.bytecode.object
         }).
         send({
-            from: accounts[0],
-            gas: "1000000"
+            from: addr,
+            nonce: nonce,
+            gas: 2000000,
         })
-    console.log(await deployed.options.address);
+    setTimeout(async ()=>{
+      console.log(await deployed.options.address);
+    }, 2000)
 }
 
 deploy();

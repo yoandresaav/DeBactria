@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import Header from "../containers/Header";
-import logoLarge from "../images/bactria-logo-large.jpeg";
 import Share from './Share';
+import ReactPlayer from "react-player";
 
 class StartPage extends Component {
   render(){
     return (
       <div className="start-page">
         <Header></Header>
-        <div className="panel-large-logo">
-          <img src={logoLarge} />
+        <div style={{ paddingTop: 20}}>
+          <div className='player-wrapper' style={{ margin: '0 auto'}}>
+            <ReactPlayer
+              className='react-player'
+              url="https://www.youtube.com/watch?v=4CpDkyBAcE4"
+              width='100%'
+              height='100%'
+            />
+          </div>
         </div>
+
         <div className="panel-text">
 
           <p>Do you want to create a Videogame but the lack of resources desincentize you? Do you need liquidity to fund gaming ideas? This is the place for you.</p>

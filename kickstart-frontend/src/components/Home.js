@@ -43,6 +43,7 @@ class Home extends Component{
 }
 
 function mapStateToProps(state){
+
     let campaigns =  state.deployedCampaigns.campaigns.map((value,index)=>{
         return  (
           <div className="list" id={index} key={index} style={{marginBottom: "16px"}}>
@@ -60,6 +61,11 @@ function mapStateToProps(state){
           </div>
         );
     });
+
+    if (campaigns.length === 0){
+      campaigns = <h3>There are no campaigns yet...</h3>
+    }
+
     let newState = {
         campaigns: campaigns,
         account: state.loadAccounts.account,

@@ -6,6 +6,7 @@ const defaultState = {
     approversCount: 0,
     requestsLength: 0,
     manager: 0x0,
+    title: '',
 }
 
 export default function getCampaignDetails(state=defaultState, action){
@@ -17,7 +18,8 @@ export default function getCampaignDetails(state=defaultState, action){
                 balance: action.balance,
                 approversCount: action.approversCount,
                 requestsLength: action.requestsLength,
-                manager: action.manager
+                manager: action.manager,
+                title: action.title
             };
         default:
             return state;

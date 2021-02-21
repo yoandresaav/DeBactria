@@ -24,7 +24,7 @@ beforeEach(async ()=>{
                                     "from": account,
                                     "gas": 1000000
                                 });
-    await CampaignFactoryDeployed.methods.createCampaign('0').send({
+    await CampaignFactoryDeployed.methods.createCampaign('0', 'testtitle').send({
             'from': account,
             'gas': 1000000
         });

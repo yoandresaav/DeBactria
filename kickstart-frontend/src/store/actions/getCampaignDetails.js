@@ -10,13 +10,15 @@ export function getCampaignDetails(id){
             id
         );
         const res = await campaignInstance.methods.getCampaignDetails().call();
+        console.log('Title: ', res[5]);
         dispatch({
             type: GET_CAMPAIGN_DETAILS,
             minimumContribution: res[0],
             balance: web3Instance.utils.fromWei(res[1],'ether'),
             approversCount: res[2],
             requestsLength: res[3],
-            manager: res[4]
+            manager: res[4],
+            title: res[5]
         });
     };
 }

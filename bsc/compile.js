@@ -4,7 +4,6 @@ const solc = require('solc');
 
 const contractPath = path.resolve(__dirname,'contracts','Campaign.sol');
 const buildPath = path.resolve(__dirname,'../','kickstart-frontend','src','build');
-console.log(buildPath);
 
 fs.emptyDirSync(buildPath);
 
@@ -25,7 +24,7 @@ var input = {
       }
     }
 };
- 
+
 fs.ensureDirSync(buildPath);
 let output = JSON.parse(solc.compile(JSON.stringify(input)));
 

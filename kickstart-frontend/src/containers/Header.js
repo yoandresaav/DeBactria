@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import ConnectLink from '../components/ConnectLink';
 import {connect} from "react-redux";
 import "../Home.css";
-import logo from '../images/DeBactria-v2.PNG' 
+import logo from '../images/logo-icon-bactria.png' 
 
 class Header extends Component{
   render(){

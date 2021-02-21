@@ -1,10 +1,11 @@
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.6.6;
 
 contract CampaignFactory{
     address[] public deployedCampaigns;
     
-    function createCampaign(uint mininmumContribution) public{
-        address newCampaign = address(new Campaign(mininmumContribution,msg.sender));
+    function createCampaign(uint mininmumContribution,string memory title) public{
+        address newCampaign = address(new Campaign(mininmumContribution,msg.sender,title));
         deployedCampaigns.push(newCampaign);
     }
     
@@ -17,6 +18,7 @@ contract Campaign{
     
     address public manager;
     uint public mininmumContribution;
+    string public title;
     
     struct Request{
         string description;
@@ -31,9 +33,10 @@ contract Campaign{
     mapping(address=>bool) approvers;
     uint public approversCount;
     
-    constructor(uint minAmt,address creator) public{
+    constructor(uint minAmt,address creator, string memory text) public{
         manager = creator;
         mininmumContribution = minAmt;
+        title = text;
     }
     
     modifier isContributor() {
@@ -77,13 +80,14 @@ contract Campaign{
         requests[ind].completed = true;
     }
     
-    function getCampaignDetails() public view returns(uint,uint,uint,uint,address){
+    function getCampaignDetails() public view returns(uint,uint,uint,uint,address,string memory){
         return (
             mininmumContribution,
             address(this).balance,
             approversCount,
             requests.length,
-            manager
+            manager,
+            title
         );
     }
     
