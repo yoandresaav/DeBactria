@@ -112,7 +112,6 @@ class NewCampaign extends Component{
                   </div>
               </form>
               <div className="icono-campaign" style={{textAlign: 'right'}}>
-                <img width={300} src={CampaignIcon} />
               </div>
             </div>
         </div>
